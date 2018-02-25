@@ -1,0 +1,21 @@
+{
+  "name": "ty-ecs",
+  "version": "1.0.1",
+  "description": "tiny ECS(Entity Component System) for js",
+  "main": "dist/ty-ecs.cjs.js",
+  "module": "dist/ty-ecs.es.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "bili --format es,cjs ./index.js",
+    "example": "babel-node example/index.js"
+  },
+  "author": "chito<ncysatnaf@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-uuid": "^1.4.8"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",    
+    "bili": "^2.2.7"
+  }
+}
