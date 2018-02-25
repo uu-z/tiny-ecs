@@ -2,6 +2,11 @@
 
 tiny ECS(Entity Component System) for js
 
+## install
+```
+yarn add ty-ecs
+```
+
 ## example
 ```js
 import ecs from 'ty-ecs'
