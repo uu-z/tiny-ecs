@@ -14,7 +14,7 @@ export default class ECS {
 	}
 
 	// create system
-	S(name, system) {
+	S(system) {
 		if (system) {
 			this._systems.push(system)
 		}

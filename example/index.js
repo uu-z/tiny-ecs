@@ -2,7 +2,8 @@ import ecs from '../index'
 
 const ECS = new ecs()
 
-ECS.S('moveSystem', {
+ECS.S({
+    name: 'moveSystem',
     components: ['position','velocity'],
     checkComponents: true,
     updateEach:(entity)=>{
@@ -10,13 +11,15 @@ ECS.S('moveSystem', {
         entity['position'].x += entity['velocity'].x
         entity['position'].y += entity['velocity'].y
     }
-}).S('ForceDamageSystem', {
+}).S({
+    name: 'ForceDamageSystem', 
     components: ['health'],
     checkComponents: true,
     updateEach:(entity)=>{
         entity['health'].hp -= 10
     }
-}).S('DeadSystem', {
+}).S({
+    name: 'DeadSystem', 
     components: ['health'],
     checkComponents: true,
     updateEach:(entity)=>{
